@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package quizsoru4;
 
 import java.util.Scanner;
@@ -77,5 +72,35 @@ public class Bus {
         }
         
     }
+    
+    public void search(){
+        System.out.println("isim giriniz");
+        String name=sc.nextLine();
+        int count=0;
+        for (Seat seat : seats) {
+            if(name.equals( seat.getP().getName() )){
+                seat.getP().Display();
+                count++;
+            }
+        }
+        if(count==0)
+                System.out.println("bulunamadi");
+        
+    }
+    
+    public void findSeat(){
+        System.out.println("Koltuk num giriniz");
+    int num=sc.nextInt();
+    if(seats[num].getP().getName()!=""){
+    seats[num].getP().Display();
+    
+    }else{
+        System.out.println("bulunamadi");
+    }
+        
+    
+    }
+    
+    
     
 }
