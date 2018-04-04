@@ -20,7 +20,7 @@ public class Main {
             int secim = sc.nextInt();
             switch (secim) {
                 case 1:
-                    System.out.println("How mant Table You Want to book?");
+                    System.out.println("How many Table You Want to book?");
                     R78.BookTable(sc.nextInt());
                     break;
                 case 2:
